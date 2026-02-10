@@ -29,6 +29,7 @@ export class AuthService {
 
   clear(): void {
     localStorage.removeItem(this.storageKey);
+    this.isLoggedIn = signal(false);
   }
 
   isAuthenticated(): boolean {
